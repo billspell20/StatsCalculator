@@ -14,7 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBOutlet weak var textValue: UITextView!
+    @IBAction func submitButton(_ sender: UIButton) {
+    }
+    
 
 }
 
