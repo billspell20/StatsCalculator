@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,6 @@
 				A514A4F68CB982779D955AE9 /* Pods-StatsCalculator.debug.xcconfig */,
 				7F96D5E4B45F5AA33D4333C6 /* Pods-StatsCalculator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				E23A444E25147B0B00E315C0 /* AppDelegate.swift */,
-				E23A445025147B0B00E315C0 /* SceneDelegate.swift */,
 				E23A44632518076900E315C0 /* Controller */,
 				E23A44622518074200E315C0 /* View */,
 				E23A445725147B1300E315C0 /* Assets.xcassets */,
@@ -103,6 +101,7 @@
 		E23A44632518076900E315C0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E23A445025147B0B00E315C0 /* SceneDelegate.swift */,
 				E23A445225147B0B00E315C0 /* ViewController.swift */,
 			);
 			path = Controller;
