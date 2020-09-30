@@ -1,15 +1,16 @@
 //
-//  ViewController.swift
+//  ResultsViewController.swift
 //  StatsCalculator
 //
-//  Created by Kirby Bright on 9/18/20.
+//  Created by Kirby Bright on 9/30/20.
 //  Copyright © 2020 William Spell. All rights reserved.
 //
-
-import UIKit
 import GoogleMobileAds
-class ViewController: UIViewController {
-    var avgValue = "0.0"
+import UIKit
+
+class ResultsViewController: UIViewController {
+    var avgValue: String?
+    
     private let banner: GADBannerView = {
         let banner = GADBannerView()
         banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -27,18 +28,20 @@ class ViewController: UIViewController {
         banner.frame = CGRect(x: 0, y: view.frame.size.height-75, width: view.frame.size.width, height: 75).integral
         
     }
-    @IBOutlet weak var textValue: UITextView!
-    @IBAction func submitButton(_ sender: UIButton) {
-        //calculate here, need to grab text values, perform on csv's
-        self.performSegue(withIdentifier: "GoToResults", sender: self)
+    
+    @IBAction func RecalculateButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToResults"{
-            let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.avgValue = "0.0"
-        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }
-

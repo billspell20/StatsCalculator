@@ -14,6 +14,7 @@
 		E23A445625147B0B00E315C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23A445425147B0B00E315C0 /* Main.storyboard */; };
 		E23A445825147B1300E315C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23A445725147B1300E315C0 /* Assets.xcassets */; };
 		E23A445B25147B1300E315C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23A445925147B1300E315C0 /* LaunchScreen.storyboard */; };
+		E2F39A75252451CB00959645 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F39A74252451CB00959645 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E23A445725147B1300E315C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E23A445A25147B1300E315C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E23A445C25147B1300E315C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F39A74252451CB00959645 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = StatsCalculator/View/ResultsViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		E23A44632518076900E315C0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E2F39A74252451CB00959645 /* ResultsViewController.swift */,
 				E23A445025147B0B00E315C0 /* SceneDelegate.swift */,
 				E23A445225147B0B00E315C0 /* ViewController.swift */,
 			);
@@ -225,6 +228,7 @@
 				E23A445325147B0B00E315C0 /* ViewController.swift in Sources */,
 				E23A444F25147B0B00E315C0 /* AppDelegate.swift in Sources */,
 				E23A445125147B0B00E315C0 /* SceneDelegate.swift in Sources */,
+				E2F39A75252451CB00959645 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
