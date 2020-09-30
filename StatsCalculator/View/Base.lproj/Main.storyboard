@@ -15,14 +15,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dp1-Jm-4S2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dp1-Jm-4S2">
+                                <rect key="frame" x="2" y="44" width="422" height="743"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAi-Vm-Kee" userLabel="TextView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="349"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAi-Vm-Kee" userLabel="TextView">
+                                        <rect key="frame" x="0.0" y="0.0" width="422" height="246.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Provide your values, separated by a comma, in the below text box." lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcC-oD-9EB">
-                                                <rect key="frame" x="46.5" y="252" width="321" height="52"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZ7-ge-XoJ">
+                                                <rect key="frame" x="39" y="25" width="344" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="d6H-t8-Gom"/>
+                                                    <constraint firstAttribute="width" constant="344" id="imt-hX-Ymh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="39"/>
+                                                <color key="textColor" red="0.6148123741" green="0.16982381603344135" blue="0.13656787836162024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provide your values, separated by a comma, in the below text box." lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcC-oD-9EB">
+                                                <rect key="frame" x="50.5" y="75" width="321" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="321" id="DkU-ZY-Ygl"/>
                                                     <constraint firstAttribute="height" constant="52" id="QLh-yk-IAg"/>
@@ -31,36 +41,37 @@
                                                 <color key="textColor" red="0.68348546347823835" green="0.18879273498874061" blue="0.1518221876631414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Statistics Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZ7-ge-XoJ">
-                                                <rect key="frame" x="35.5" y="177" width="343.5" height="51"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="39"/>
-                                                <color key="textColor" red="0.6148123741" green="0.16982381603344135" blue="0.13656787836162024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="rcC-oD-9EB" firstAttribute="top" secondItem="PZ7-ge-XoJ" secondAttribute="bottom" constant="24" id="02t-su-rft"/>
-                                            <constraint firstItem="rcC-oD-9EB" firstAttribute="centerX" secondItem="NAi-Vm-Kee" secondAttribute="centerX" id="8MO-jW-9KV"/>
-                                            <constraint firstItem="PZ7-ge-XoJ" firstAttribute="centerX" secondItem="NAi-Vm-Kee" secondAttribute="centerX" id="XP4-DZ-X6w"/>
-                                            <constraint firstItem="rcC-oD-9EB" firstAttribute="top" secondItem="PZ7-ge-XoJ" secondAttribute="bottom" constant="24" id="l6e-Tx-mxs"/>
-                                            <constraint firstItem="PZ7-ge-XoJ" firstAttribute="centerY" secondItem="NAi-Vm-Kee" secondAttribute="centerY" id="p8M-l1-eSp"/>
+                                            <constraint firstItem="rcC-oD-9EB" firstAttribute="centerX" secondItem="NAi-Vm-Kee" secondAttribute="centerX" id="5wS-Vr-TdX"/>
+                                            <constraint firstItem="rcC-oD-9EB" firstAttribute="top" secondItem="PZ7-ge-XoJ" secondAttribute="bottom" constant="5" id="Xaf-ie-iZu"/>
+                                            <constraint firstItem="PZ7-ge-XoJ" firstAttribute="centerX" secondItem="NAi-Vm-Kee" secondAttribute="centerX" id="f5h-Pd-kdZ"/>
+                                            <constraint firstItem="PZ7-ge-XoJ" firstAttribute="top" secondItem="NAi-Vm-Kee" secondAttribute="top" constant="25" id="lHO-4k-cwq"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17G-P8-6Of" userLabel="InputView">
-                                        <rect key="frame" x="0.0" y="357" width="414" height="263"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoP-I9-dDz" userLabel="SepView">
+                                        <rect key="frame" x="0.0" y="247.5" width="422" height="50"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17G-P8-6Of" userLabel="InputView">
+                                        <rect key="frame" x="0.0" y="298.5" width="422" height="322"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Enter values here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4vK-0Y-BHP">
-                                                <rect key="frame" x="8" y="8" width="398" height="179"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter values here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4vK-0Y-BHP">
+                                                <rect key="frame" x="12" y="67.5" width="398" height="179"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="179" id="NAI-BS-YKZ"/>
+                                                    <constraint firstAttribute="width" constant="398" id="bmt-ro-DRc"/>
+                                                </constraints>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrJ-AS-43R">
-                                                <rect key="frame" x="122.5" y="196" width="169" height="65"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrJ-AS-43R">
+                                                <rect key="frame" x="126.5" y="255.5" width="169" height="65"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="67.5" id="Scd-jH-Jvi"/>
                                                     <constraint firstAttribute="width" constant="169" id="gGC-73-HMT"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="z2d-1T-2RW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="Calculate" backgroundImage="square.fill" catalog="system"/>
@@ -69,27 +80,31 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="4vK-0Y-BHP" firstAttribute="leading" secondItem="17G-P8-6Of" secondAttribute="leading" constant="12" id="5tP-Ml-UMG"/>
                                             <constraint firstItem="4vK-0Y-BHP" firstAttribute="centerX" secondItem="17G-P8-6Of" secondAttribute="centerX" id="DW0-WD-Q63"/>
-                                            <constraint firstItem="4vK-0Y-BHP" firstAttribute="centerX" secondItem="17G-P8-6Of" secondAttribute="centerX" id="Eco-eG-GH9"/>
-                                            <constraint firstItem="TrJ-AS-43R" firstAttribute="top" secondItem="4vK-0Y-BHP" secondAttribute="bottom" constant="12" id="WrT-5K-oUA"/>
                                             <constraint firstItem="TrJ-AS-43R" firstAttribute="centerX" secondItem="17G-P8-6Of" secondAttribute="centerX" id="cqQ-tC-ty1"/>
                                             <constraint firstItem="TrJ-AS-43R" firstAttribute="centerX" secondItem="17G-P8-6Of" secondAttribute="centerX" id="erz-R0-Y0g"/>
+                                            <constraint firstAttribute="trailing" secondItem="4vK-0Y-BHP" secondAttribute="trailing" constant="12" id="hmW-aO-Tgq"/>
+                                            <constraint firstItem="TrJ-AS-43R" firstAttribute="top" secondItem="4vK-0Y-BHP" secondAttribute="bottom" constant="8" id="qcS-0F-v2i"/>
+                                            <constraint firstAttribute="bottom" secondItem="TrJ-AS-43R" secondAttribute="bottom" constant="0.050000000000000003" id="zEL-vb-C03"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndb-AX-U9E">
-                                        <rect key="frame" x="0.0" y="628" width="414" height="190"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndb-AX-U9E" userLabel="BlankView">
+                                        <rect key="frame" x="0.0" y="621.5" width="422" height="121.5"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="17G-P8-6Of" firstAttribute="top" secondItem="IoP-I9-dDz" secondAttribute="bottom" constant="1" id="Deo-GY-em5"/>
+                                    <constraint firstItem="IoP-I9-dDz" firstAttribute="top" secondItem="NAi-Vm-Kee" secondAttribute="bottom" constant="1" id="cTw-df-Qdq"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.80743238996998945" green="0.92062387637508047" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dp1-Jm-4S2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Po5-in-RRI"/>
-                            <constraint firstItem="dp1-Jm-4S2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aer-n5-Pq4"/>
-                            <constraint firstItem="dp1-Jm-4S2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="owz-wl-0sE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dp1-Jm-4S2" secondAttribute="bottom" constant="75" id="Vns-js-fsT"/>
+                            <constraint firstItem="dp1-Jm-4S2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="oaq-d3-TY2"/>
+                            <constraint firstItem="dp1-Jm-4S2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="2" id="qbm-WG-yJy"/>
                             <constraint firstItem="dp1-Jm-4S2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z9q-sf-njt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
