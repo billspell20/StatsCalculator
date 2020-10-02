@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  StatsCalculator
 //
-//  Created by Kirby Bright on 9/18/20.
+//  Created by William Spell on 9/18/20.
 //  Copyright © 2020 William Spell. All rights reserved.
 //
 
