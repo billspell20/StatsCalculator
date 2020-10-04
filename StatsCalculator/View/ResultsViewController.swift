@@ -11,9 +11,12 @@ import UIKit
 class ResultsViewController: UIViewController {
     var avgValue = "0.0"
     var length = "0.0"
-    
-    
-    
+    var min = "0.0"
+    var max = "0.0"
+    var sum = "0.0"
+    var range = "0.0"
+    var median = "0.0"
+    var mode = "0.0"
     
     
     
@@ -45,9 +48,16 @@ class ResultsViewController: UIViewController {
         banner.rootViewController = self
         view.addSubview(banner)
         
-        // add labels/calculations here
+        //labels here
         AverageLabel.text = avgValue
+        MedianLabel.text = median
+        ModeLabel.text = mode
+        
         CountLabel.text = length
+        SumLabel.text = sum
+        LargestLabel.text = max
+        SmallestLabel.text = min
+        RangeLabel.text = range
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
