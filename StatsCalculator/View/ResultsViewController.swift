@@ -10,7 +10,28 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     var avgValue = "0.0"
+    var length = "0.0"
+    
+    
+    
+    
+    
+    
     @IBOutlet weak var AverageLabel: UILabel!
+    @IBOutlet weak var MedianLabel: UILabel!
+    @IBOutlet weak var ModeLabel: UILabel!
+    @IBOutlet weak var CountLabel: UILabel!
+    @IBOutlet weak var SumLabel: UILabel!
+    @IBOutlet weak var LargestLabel: UILabel!
+    @IBOutlet weak var SmallestLabel: UILabel!
+    @IBOutlet weak var RangeLabel: UILabel!
+    @IBOutlet weak var GeometricMeanLabel: UILabel!
+    @IBOutlet weak var StandardDeviationLabel: UILabel!
+    @IBOutlet weak var VarianceLabel: UILabel!
+    @IBOutlet weak var SampleSDLabel: UILabel!
+    @IBOutlet weak var SampleVarianceLabel: UILabel!
+    
+    
     
     private let banner: GADBannerView = {
         let banner = GADBannerView()
@@ -23,7 +44,10 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         banner.rootViewController = self
         view.addSubview(banner)
+        
+        // add labels/calculations here
         AverageLabel.text = avgValue
+        CountLabel.text = length
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()

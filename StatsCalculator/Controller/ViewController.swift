@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     @IBAction func submitButton(_ sender: UIButton) {
         //calculate here, need to grab text values, perform on csv's
         content = TextValue.text
-        let parsedCSV: [String] = content.components(separatedBy: ","+" ")// parse
+        let parsedCSV: [String] = content.components(separatedBy: (","))// parse
         let doubles = parsedCSV.compactMap(Double.init)
         length =   Double(doubles.count)
         let sum = doubles.reduce(0, +)
@@ -60,6 +60,7 @@ class ViewController: UIViewController {
         if segue.identifier == "GoToResults"{
             let destinationVC = segue.destination as! ResultsViewController
             destinationVC.avgValue = String(avgValue)
+            destinationVC.length = String(length)
         }
     }
 
