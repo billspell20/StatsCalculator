@@ -9,7 +9,8 @@ import GoogleMobileAds
 import UIKit
 
 class ResultsViewController: UIViewController {
-    var avgValue: String?
+    var avgValue = "0.0"
+    @IBOutlet weak var AverageLabel: UILabel!
     
     private let banner: GADBannerView = {
         let banner = GADBannerView()
@@ -22,6 +23,7 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         banner.rootViewController = self
         view.addSubview(banner)
+        AverageLabel.text = avgValue
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()

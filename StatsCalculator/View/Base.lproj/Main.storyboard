@@ -58,6 +58,9 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter values here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4vK-0Y-BHP">
                                                 <rect key="frame" x="20" y="67.5" width="398" height="179"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <accessibility key="accessibilityConfiguration" label="TextValue">
+                                                    <accessibilityTraits key="traits" allowsDirectInteraction="YES"/>
+                                                </accessibility>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="179" id="NAI-BS-YKZ"/>
                                                     <constraint firstAttribute="width" constant="398" id="bmt-ro-DRc"/>
@@ -109,7 +112,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="TextValue" destination="4vK-0Y-BHP" id="Sug-5W-e3c"/>
                         <outlet property="textValue" destination="4vK-0Y-BHP" id="wHi-fY-33w"/>
+                        <outletCollection property="TextValue" destination="4vK-0Y-BHP" collectionClass="NSMutableArray" id="amD-FP-syL"/>
+                        <outletCollection property="TextValue" destination="4vK-0Y-BHP" collectionClass="NSMutableArray" id="q2b-bD-cac"/>
                         <segue destination="xTc-Pg-Dhz" kind="presentation" identifier="GoToResults" id="Csc-hF-ymM"/>
                     </connections>
                 </viewController>
@@ -149,6 +155,21 @@
                                     <constraint firstItem="aL7-MM-1fZ" firstAttribute="centerX" secondItem="SN8-KI-F9V" secondAttribute="centerX" id="Rvu-q7-y6b"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEO-dg-oKH">
+                                <rect key="frame" x="35" y="69" width="67" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.6148123741" green="0.16982381599999999" blue="0.13656787840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjZ-kh-GDJ">
+                                <rect key="frame" x="121" y="71" width="166" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="AverageLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80743239" green="0.92062387639999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -160,6 +181,9 @@
                         <viewLayoutGuide key="safeArea" id="Kfr-xy-Mw7"/>
                     </view>
                     <navigationItem key="navigationItem" id="VH7-Cu-HXC"/>
+                    <connections>
+                        <outlet property="AverageLabel" destination="zjZ-kh-GDJ" id="RT9-pg-sbD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmS-J0-gTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
