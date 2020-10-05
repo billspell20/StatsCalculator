@@ -17,8 +17,11 @@ class ResultsViewController: UIViewController {
     var range = "0.0"
     var median = "0.0"
     var mode = "0.0"
-    
-    
+    var geomean = "0.0"
+    var stddev = "0.0"
+    var variance = "0.0"
+    var samplestddev = "0.0"
+    var samplevariance = "0.0"
     
     @IBOutlet weak var AverageLabel: UILabel!
     @IBOutlet weak var MedianLabel: UILabel!
@@ -34,8 +37,6 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var SampleSDLabel: UILabel!
     @IBOutlet weak var SampleVarianceLabel: UILabel!
     
-    
-    
     private let banner: GADBannerView = {
         let banner = GADBannerView()
         banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -47,17 +48,20 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         banner.rootViewController = self
         view.addSubview(banner)
-        
         //labels here
         AverageLabel.text = avgValue
         MedianLabel.text = median
         ModeLabel.text = mode
-        
         CountLabel.text = length
         SumLabel.text = sum
         LargestLabel.text = max
         SmallestLabel.text = min
         RangeLabel.text = range
+        GeometricMeanLabel.text = geomean
+        StandardDeviationLabel.text = stddev
+        VarianceLabel.text = variance
+        SampleSDLabel.text = samplestddev
+        SampleVarianceLabel.text = samplevariance
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
@@ -68,16 +72,4 @@ class ResultsViewController: UIViewController {
     @IBAction func RecalculateButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -19,9 +19,13 @@ var max = 0.0
 var range = 0.0
 var median = 0.0
 var mode = "0.0"
-var modecounts = [Double: Double]()
 var value = 0
 var count = 0
+var geomean = 0.0
+var stddev = 0.0
+var variance = 0.0
+var samplestddev = 0.0
+var samplevariance = 0.0
 
 class ViewController: UIViewController {
     private let banner: GADBannerView = {
@@ -46,7 +50,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     func calculateMedian(array: [Double]) -> Double {
         guard length > 0 else {return 0}
         let sorted = array.sorted()
@@ -57,10 +60,8 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
     @IBAction func submitButton(_ sender: UIButton) {
-        //calculations done here
+        //calculations/parsing done here
         content = TextValue.text
         let parsedCSV: [String] = content.components(separatedBy: (","))// parse
         let doubles = parsedCSV.compactMap(Double.init)
@@ -72,8 +73,8 @@ class ViewController: UIViewController {
         range = max - min
         median = calculateMedian(array: doubles)
         
-        // calculate mode directly
-        
+        // calculate mode
+        var modecounts = [Double: Double]()
         doubles.forEach { modecounts[$0] = (modecounts[$0] ?? 0) + 1 }
         if let (_, count) = modecounts.max(by: { $0.1 < $1.1 }) {
             if count == 1 {
@@ -89,11 +90,22 @@ class ViewController: UIViewController {
         } else {
             mode = "0.0"
         }
-        //end mode calculation
         
-        print(median)
-        print(doubles)
-        //print(parsedCSV)
+        //geometric mean
+        geomean = pow(doubles.reduce(1.0, *), 1.0 / length)
+        
+        //standard deviation
+        let sumOfSquaredAvgDiff = doubles.map { pow($0 - avgValue, 2.0)}.reduce(0, {$0 + $1})
+        stddev = sqrt(sumOfSquaredAvgDiff / length)
+        
+        //variance
+        variance = pow(stddev, 2)
+        
+        //sample standard dev
+        samplestddev = sqrt(sumOfSquaredAvgDiff / (length-1))
+        
+        //sample var
+        samplevariance = pow(samplestddev, 2)
         self.performSegue(withIdentifier: "GoToResults", sender: self)
     }
     
@@ -108,6 +120,11 @@ class ViewController: UIViewController {
             destinationVC.max = String(max)
             destinationVC.range = String(range)
             destinationVC.mode = mode
+            destinationVC.geomean = String(format: "%.05f", geomean)
+            destinationVC.stddev = String(format: "%.05f", stddev)
+            destinationVC.variance = String(format: "%.05f", variance)
+            destinationVC.samplestddev = String(format: "%.05f", samplestddev)
+            destinationVC.samplevariance = String(format: "%.05f", samplevariance)
         }
     }
 
