@@ -8,7 +8,6 @@
 
 import UIKit
 import GoogleMobileAds
-
 var content = "0.0"
 var avgValue = 0.0
 var length = 0.0
@@ -35,7 +34,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         banner.backgroundColor = .secondarySystemBackground
         return banner
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         banner.rootViewController = self
@@ -43,8 +42,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         TextValue.delegate = self
         TextValue.text = "Enter values here"
         TextValue.textColor = UIColor.placeholderText
-        //code below enables decimal pad keyboard
-        //self.TextValue.keyboardType = UIKeyboardType.decimalPad
+        //code below enables numbers+punctuation keyboard
+        self.TextValue.keyboardType = UIKeyboardType.numbersAndPunctuation
     }
     
     override func viewDidLayoutSubviews(){
@@ -53,10 +52,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         
     }
     
-    
-    
     @IBOutlet weak var TextValue: UITextView!
-
+    
     //UITextView placeholder functionality
     func textViewDidBeginEditing(_ TextValue: UITextView) {
         if TextValue.textColor == UIColor.placeholderText {
@@ -70,6 +67,8 @@ class ViewController: UIViewController, UITextViewDelegate {
             TextValue.textColor = UIColor.placeholderText
         }
     }
+    
+
     
     func calculateMedian(array: [Double]) -> Double {
         guard length > 0 else {return 0}
