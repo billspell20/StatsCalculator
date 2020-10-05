@@ -26,6 +26,7 @@ PODS:
   - "GoogleUtilities/NSData+zlib (6.7.2)"
   - GoogleUtilities/Reachability (6.7.2):
     - GoogleUtilities/Logger
+  - IQKeyboardManagerSwift (6.5.6)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
     - nanopb/encode (= 1.30906.0)
@@ -35,6 +36,7 @@ PODS:
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
+  - IQKeyboardManagerSwift
 
 SPEC REPOS:
   trunk:
@@ -42,6 +44,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
     - GoogleUtilities
+    - IQKeyboardManagerSwift
     - nanopb
     - PromisesObjC
 
@@ -50,9 +53,10 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 966e88df9d19c15715137bb2ddaf52373f111436
   GoogleUserMessagingPlatform: c85530d930ba509583aa5a6d50a10aca22cf8502
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: 84eabad49f4f1e86b0c710314faf4621311719e0
+PODFILE CHECKSUM: 456510837d1b172171e97c32156b572d926f63f7
 
 COCOAPODS: 1.9.3

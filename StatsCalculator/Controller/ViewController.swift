@@ -27,7 +27,7 @@ var variance = 0.0
 var samplestddev = 0.0
 var samplevariance = 0.0
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
     private let banner: GADBannerView = {
         let banner = GADBannerView()
         banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -36,18 +36,39 @@ class ViewController: UIViewController {
         return banner
     }()
     
-    @IBOutlet weak var TextValue: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         banner.rootViewController = self
         view.addSubview(banner)
+        TextValue.delegate = self
+        TextValue.text = "Enter values here"
+        TextValue.textColor = UIColor.placeholderText
+        //code below enables decimal pad keyboard
+        //self.TextValue.keyboardType = UIKeyboardType.decimalPad
     }
     
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
         banner.frame = CGRect(x: 0, y: view.frame.size.height-75, width: view.frame.size.width, height: 75).integral
         
+    }
+    
+    
+    
+    @IBOutlet weak var TextValue: UITextView!
+
+    //UITextView placeholder functionality
+    func textViewDidBeginEditing(_ TextValue: UITextView) {
+        if TextValue.textColor == UIColor.placeholderText {
+            TextValue.text = nil
+            TextValue.textColor = UIColor.black
+        }
+    }
+    func textViewDidEndEditing(_ TextValue: UITextView) {
+        if TextValue.text.isEmpty {
+            TextValue.text = "Enter values here"
+            TextValue.textColor = UIColor.placeholderText
+        }
     }
     
     func calculateMedian(array: [Double]) -> Double {

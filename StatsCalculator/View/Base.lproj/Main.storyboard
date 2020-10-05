@@ -57,7 +57,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17G-P8-6Of" userLabel="InputView">
                                         <rect key="frame" x="0.0" y="302.33333333333337" width="414" height="319.33333333333337"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter values here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4vK-0Y-BHP">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Enter values here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4vK-0Y-BHP">
                                                 <rect key="frame" x="20" y="64.666666666666686" width="374" height="179"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <accessibility key="accessibilityConfiguration" label="TextValue">
@@ -67,7 +67,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="684-h1-mBq"/>
                                                     <constraint firstAttribute="height" constant="179" id="NAI-BS-YKZ"/>
                                                 </constraints>
-                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
