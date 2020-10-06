@@ -25,6 +25,7 @@ var stddev = 0.0
 var variance = 0.0
 var samplestddev = 0.0
 var samplevariance = 0.0
+var mycharset = "0123456789.,-"
 
 class ViewController: UIViewController, UITextViewDelegate {
     private let banner: GADBannerView = {
@@ -54,6 +55,17 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var TextValue: UITextView!
     
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        /// 1. replacementText is NOT empty means we are entering text or pasting text: perform the logic
+        /// 2. replacementText is empty means we are deleting text: return true
+        if text.count > 0 {
+            let allowedCharacters = CharacterSet.init(charactersIn: mycharset)
+            let unwantedStr = text.trimmingCharacters(in: allowedCharacters)
+            return unwantedStr.count == 0
+        }
+
+        return true
+    }
     //UITextView placeholder functionality
     func textViewDidBeginEditing(_ TextValue: UITextView) {
         if TextValue.textColor == UIColor.placeholderText {
@@ -67,8 +79,6 @@ class ViewController: UIViewController, UITextViewDelegate {
             TextValue.textColor = UIColor.placeholderText
         }
     }
-    
-
     
     func calculateMedian(array: [Double]) -> Double {
         guard length > 0 else {return 0}
@@ -149,4 +159,3 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
 
 }
-
