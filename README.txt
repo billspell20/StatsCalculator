@@ -17,3 +17,5 @@ Sample Standard Deviation
 Sample Variance
 
 From the second screen, you can then choose to go back to the first page to edit your values or enter new values. 
+
+iOS Version 13.6+
