@@ -74,7 +74,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrJ-AS-43R">
-                                                <rect key="frame" x="122.66666666666669" y="193.33333333333329" width="169" height="64.333333333333314"/>
+                                                <rect key="frame" x="122.66666666666669" y="193.33333333333326" width="169" height="64.333333333333314"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="67.5" id="Scd-jH-Jvi"/>
                                                     <constraint firstAttribute="width" constant="169" id="gGC-73-HMT"/>
@@ -532,7 +532,7 @@
                                 <rect key="frame" x="0.0" y="670" width="414" height="97"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-MM-1fZ">
-                                        <rect key="frame" x="105" y="44.666666666666671" width="204" height="50.666666666666664"/>
+                                        <rect key="frame" x="105" y="44.666666666666657" width="204" height="50.666666666666664"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="204" id="iTn-cy-l3a"/>
                                             <constraint firstAttribute="height" constant="53.5" id="zEH-96-PBa"/>

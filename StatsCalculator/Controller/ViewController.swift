@@ -30,7 +30,7 @@ var mycharset = "0123456789.,-"
 class ViewController: UIViewController, UITextViewDelegate {
     private let banner: GADBannerView = {
         let banner = GADBannerView()
-        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        banner.adUnitID = "ca-app-pub-1590976018869330/9963539835"
         banner.load(GADRequest())
         banner.backgroundColor = .secondarySystemBackground
         return banner
