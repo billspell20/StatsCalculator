@@ -30,7 +30,7 @@ var mycharset = "0123456789.,-"
 class ViewController: UIViewController, UITextViewDelegate {
     private let banner: GADBannerView = {
         let banner = GADBannerView()
-        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        banner.adUnitID = "ca-app-pub-1590976018869330/9963539835"
         banner.load(GADRequest())
         banner.backgroundColor = .secondarySystemBackground
         return banner
@@ -150,11 +150,11 @@ class ViewController: UIViewController, UITextViewDelegate {
             destinationVC.max = String(max)
             destinationVC.range = String(range)
             destinationVC.mode = mode
-            destinationVC.geomean = String(format: "%.05f", geomean)
-            destinationVC.stddev = String(format: "%.05f", stddev)
-            destinationVC.variance = String(format: "%.05f", variance)
-            destinationVC.samplestddev = String(format: "%.05f", samplestddev)
-            destinationVC.samplevariance = String(format: "%.05f", samplevariance)
+            destinationVC.geomean = String(geomean)
+            destinationVC.stddev = String(stddev)
+            destinationVC.variance = String(variance)
+            destinationVC.samplestddev = String(samplestddev)
+            destinationVC.samplevariance = String(samplevariance)
         }
     }
 
